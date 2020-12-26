@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="description" content="3x3x3 Speedsolving Method - Mehta">
+	<meta name="keywords" content="3x3, Rubik's cube, algorithm, method, Mehta">
+  	<meta name="author" content="Yash Mehta">
+	
+	<title>Mehta</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+      <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Mehta</span></h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="index.html">Home</a>
+                </div>
+            </li>
+           
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="EOLedge.html">EO-Ledge</a>
+                </div>
+            </li>
+            
+            <li class="current">
+                <div class="dropdown">
+                    <a class="primary" href="">Variants</a>
+                    <div class="dropdown-content">
+                        <a class="secondary" href="mehta_os.html">Mehta-OS</a>
+                        <a class="secondary" href="mehta_tdr.html">Mehta-TDR</a>
+                    </div>
+                </div>
+            </li>
+                        
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="">Examples</a>
+                    <div class="dropdown-content">
+                        <a class="secondary" href="">Mehta-OS</a>
+                        <a class="secondary" href="">Mehta-TDR</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="about.html">About</a>
+                </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <section id="variant-exp">
+        <div class="container">
+            <p>The theme of Mehta is to solve a greater fraction of the cube using algorithms; and the way to provide room for creativity in algorithmic steps is option-select. Having a structured option-select system like in Mehta-OS means having a choice between two algorithms on each step, where one could alwyas pick the one that is easier to recognise and/or execute. The flowchart on the <a href="index.html">Home</a> page explains briefly what the four possible paths for Mehta-OS are.</p>
+
+            <p>Getting a few abbreviations and definitions out of the way:</p>
+            <ul>
+                <li><b>6CO:</b> 6 Corners' Orientation; a ~9 STM algorithm which is usually RU-gen, to orient the remaining 6 corners on the 3x3x3 after EO-ledge.</li>
+                <li><b>6CP:</b> 6 Corners' Permutation; a ~10 STM algorithm which is usually RUD-gen, to solve the remaining 6 corners on the 3x3x3 after 6CO.</li>
+                <li><b>APDR:</b> Andreas' Permutation of DR block; an ~8 STM algorithm which is usually RU-gen, to solve the DR-block on the 3x3x3 after EO-ledge.</li>
+                <li><b>DCAL:</b> Down Corners After Ledge (aka CAL-STATE); a ~9 STM algorithm which is usually RU-gen, to solve the remaining 2 D layer corners on the 3x3x3 after EO-ledge.</li>
+                <li><b>CDRLL:</b> Corners of Last Layer (CxLL) with DR edge free; an ~11 STM algorithm, to solve the remaining 4 U-layer corners on the 3x3x3 after DCAL.</li>
+                <li><b>JTLE:</b> John Tamanas' Last Edge; a ~9 STM algorithm which is usually RU-gen, to orient the remaining 4 U-layer corners on the 3x3x3 as well as solve the DR-edge after DCAL.</li>
+                <li><b>L5EP:</b> Last 5 Edges' Permutation; an ~8 STM algorithm which is usually MU-gen, to solve the remaining 5 edges on the 3x3x3 after 6CP or CDRLL.</li>
+                <li><b>PLL:</b> Permutation of Last Layer; a ~13 STM algorithm, to solve the last layer on the 3x3x3 after APDR or JTLE.</li>
+            </ul>
+            <p>The number of cases in each set is given in the flowchart. All Mehta-OS algorithms can be found <a href="https://docs.google.com/spreadsheets/d/1qY8c-ypPAn-51pDQOYI-DzpyMPnPAri2qOTh3ZG1fjw/edit#gid=2087327765">here</a>.</p>
+        </div>
+    </section>
+
+
+    <section id="rest">
+    	<div class="container">
+            <p>There are 4 paths in Mehta-OS, named after the unique middle step in each path: Mehta-6CP, Mehta-APDR, Mehta-CDRLL and Mehta-JTLE. The movecount statistics (generated over 16000 X 4 solves using algorithms in the spreadsheet) for each path are given below:</p>
+
+            <table>
+                <thead>
+                    <th>6CP</th>
+                    <th>EO-ledge</th>
+                    <th>preAUF (6CO)</th>
+                    <th>6CO</th>
+                    <th>preAUF (6CP)</th>
+                    <th>6CP</th>
+                    <th>preAUF (L5EP)</th>
+                    <th>L5EP</th>
+                    <th>ABF</th>
+                    <th>Total</th>
+                </thead>
+                <tr>
+                    <td>Average</td>
+                    <td>17.4</td>
+                    <td>0.70</td>
+                    <td>8.45</td>
+                    <td>0.73</td>
+                    <td>9.54</td>
+                    <td>0.71</td>
+                    <td>7.21</td>
+                    <td>1.00</td>
+                    <td>45.75</td>
+                </tr>
+                <tr>
+                    <td>Std. Dev.</td>
+                    <td></td>
+                    <td>0.46</td>
+                    <td>1.83</td>
+                    <td>0.44</td>
+                    <td>2.70</td>
+                    <td>0.45</td>
+                    <td>1.74</td>
+                    <td>0.58</td>
+                    <td>4.27</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>17</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>Minimum</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>2</td>
+                    <td>59</td>
+                </tr>
+            </table>
+
+            <table>
+                <thead>
+                    <th>APDR</th>
+                    <th>EO-ledge</th>
+                    <th>preAUF (6CO)</th>
+                    <th>6CO</th>
+                    <th>preAUF (APDR)</th>
+                    <th>APDR</th>
+                    <th>preAUF (PLL)</th>
+                    <th>PLL</th>
+                    <th>ABF</th>
+                    <th>Total</th>
+                </thead>
+                <tr>
+                    <td>Average</td>
+                    <td>17.4</td>
+                    <td>0.70</td>
+                    <td>8.45</td>
+                    <td>0.74</td>
+                    <td>7.24</td>
+                    <td>0.70</td>
+                    <td>11.41</td>
+                    <td>1.00</td>
+                    <td>47.64</td>
+                </tr>
+                <tr>
+                    <td>Std. Dev.</td>
+                    <td></td>
+                    <td>0.46</td>
+                    <td>1.83</td>
+                    <td>0.44</td>
+                    <td>2.24</td>
+                    <td>0.46</td>
+                    <td>2.91</td>
+                    <td>0.58</td>
+                    <td>4.66</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>17</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>12</td>
+                    <td>1</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td>Minimum</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>16</td>
+                    <td>2</td>
+                    <td>64</td>
+                </tr>
+            </table>
+
+            <table>
+                <thead>
+                    <th>CDRLL</th>
+                    <th>EO-ledge</th>
+                    <th>preAUF (DCAL)</th>
+                    <th>DCAL</th>
+                    <th>preAUF (CDRLL)</th>
+                    <th>CDRLL</th>
+                    <th>preAUF (L5EP)</th>
+                    <th>L5EP</th>
+                    <th>ABF</th>
+                    <th>Total</th>
+                </thead>
+                <tr>
+                    <td>Average</td>
+                    <td>17.4</td>
+                    <td>0.70</td>
+                    <td>8.23</td>
+                    <td>0.74</td>
+                    <td>10.12</td>
+                    <td>0.72</td>
+                    <td>7.22</td>
+                    <td>1.00</td>
+                    <td>46.12</td>
+                </tr>
+                <tr>
+                    <td>Std. Dev.</td>
+                    <td></td>
+                    <td>0.46</td>
+                    <td>2.01</td>
+                    <td>0.44</td>
+                    <td>2.23</td>
+                    <td>0.45</td>
+                    <td>1.74</td>
+                    <td>0.58</td>
+                    <td>4.09</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>17</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>Minimum</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>16</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>2</td>
+                    <td>60</td>
+                </tr>
+            </table>
+
+            <table>
+                <thead>
+                    <th>JTLE</th>
+                    <th>EO-ledge</th>
+                    <th>preAUF (DCAL)</th>
+                    <th>DCAL</th>
+                    <th>preAUF (JTLE)</th>
+                    <th>JTLE</th>
+                    <th>preAUF (PLL)</th>
+                    <th>PLL</th>
+                    <th>ABF</th>
+                    <th>Total</th>
+                </thead>
+                <tr>
+                    <td>Average</td>
+                    <td>17.4</td>
+                    <td>0.70</td>
+                    <td>8.23</td>
+                    <td>0.74</td>
+                    <td>8.96</td>
+                    <td>0.70</td>
+                    <td>11.42</td>
+                    <td>1.00</td>
+                    <td>49.14</td>
+                </tr>
+                <tr>
+                    <td>Std. Dev.</td>
+                    <td></td>
+                    <td>0.46</td>
+                    <td>2.01</td>
+                    <td>0.44</td>
+                    <td>1.93</td>
+                    <td>0.46</td>
+                    <td>2.94</td>
+                    <td>0.58</td>
+                    <td>4.61</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>17</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>12</td>
+                    <td>49</td>
+                </tr>
+                <tr>
+                    <td>Minimum</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>16</td>
+                    <td>2</td>
+                    <td>64</td>
+                </tr>
+            </table>
+
+            <p>Note that these are algorithmic steps, so the efficiency of the simulation is identical to the efficiency of any solver for each simulation except in the EO-Ledge part. It should be noted that the most efficient of the 4 paths on average is the 6CP path, followed closely by the CDRLL path.</p>
+
+            <p>Now consider a solver that always knows which path to pick for every scramble to get the shortest solution. Running a simulation (of 1000 solves) for such a solver gives the best possible average movecount of Mehta-OS finish to be 26.27 STM (standard deviation of 3.32 STM, median 26 STM). Compared to 29 move median finish for 6CP and CDRLL paths, having option select in one's arsenal can chop the movecount by upto 3 STM on average.</p>
+
+            <p>More importantly, this simulation shows that the most efficient solutions are achieved using the 6CP path in 46.7% of the solves, using the CDRLL path in 44.6% of the solves, using the APDR path in 20.0% of the solves, and using the JTLE path in 12.9% of the solves (The sum of these numbers is more than 100% due to ties). This reveals that the default path a Mehta-OS user should choose is either the 6CP path or the CDRLL path (where the user is guaranteed the most efficient OS finish ~45% of the time). Either of these should be the first path the user learns, and any other path the user learns would be add-ons for option select, which depending on the judgement of the user would increase their likelihood of getting the most efficient OS finish appropriately.</p>
+
+            <p>6CP-vs-CDRLL: Which path should you learn first / as your default path? 6CP is slightly more efficient CDRLL, and APDR (which is accessible as soon as you learn 6CP) is far more valuable than JTLE (which is accessible on learning CDRLL) as an option-select second path. However, CDRLL is more efficient than 6CP in QTM, and the recognition and algorithms will be very familiar to people coming from backgrounds in CMLL or COLL. Moreover, it is easier to transition to Mehta-TDR from CDRLL (since DCAL is a subset of TDR, and COLL (very similar to CDRLL) is a subset of ZBLL). At the end, it is an open debate that could have different answers for different users.</p>
+
+            <p>A note on L5EP: Because there are so few L5EP cases, it is advisible to learn L5EP from multiple angles (i.e. the D edge being in DR, DF or DB; all these algorithms are also included in the sheet). This way, if after CDRLL/6CP, the ADF is a D or a D', one could do the ADF before L5EP, giving more time for L5EP recognition, and finally ending with only an AUF instead of an ABF.</p>
+
+            <p>While the total number of algorithms required for full Mehta-OS might seem to add up to over 300, not all algorithms need to be learned. Say your default path is DCAL -> CDRLL -> L5EP; the first decision point is whether to do 6CO in place of DCAL so one would be alright memorising only the 6CO algorithms with good recognition and / or execution; the second decision point is at CDRLL or 6CP, so all CDRLL and 6CP would have to be learned but only selected JTLE and APDR algorithms (already marked in the algsheet) should be learned. This allows to use full Mehta-OS to almost the best of its potential without learning all the algorithms.</p>
+
+            <p>And finally, choosing to learn only one path (either 6CP or CDRLL) and using only that without any option-select should still give the user a sub-50 movecount on average; which in the right hands could still get great results.</p>
+    	</div>
+    </section>
+    
+
+	<footer>
+		<div class="container">
+    		<p>For improvements or corrections, contact: yashovardhanmehta@gmail.com</p>
+    	</div>
+    </footer>
+</body>
+</html>

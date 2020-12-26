@@ -35,8 +35,8 @@
                 <div class="dropdown">
                     <a class="primary" href="">Variants</a>
                     <div class="dropdown-content">
-                        <a class="secondary" href="">Mehta-OS</a>
-                        <a class="secondary" href="">Mehta-TDR</a>
+                        <a class="secondary" href="mehta_os.html">Mehta-OS</a>
+                        <a class="secondary" href="mehta_tdr.html">Mehta-TDR</a>
                     </div>
                 </div>
             </li>
@@ -65,9 +65,9 @@
 
     <section>
         <div class="container">
-            <p>Algorithmic methods are doing fairly well compared to block building methods, and for good reason. TPS on the new hardware has shot up and it makes sense to make best use of it. <a href="https://drive.google.com/file/d/1hfPgMPEbKRRm-YcehwaOXKG05hgEGouG/view?usp=sharing">Here</a> is a part of a spreadsheet by Brest analysing the World Championship 2019 3x3x3 Finals containing the average STPS of the 14 CFOP solvers during Fisrt 2 Layers (F2L) and Last Layer (LL). Despite there being OLL-recognition and PLL-recognition pauses, the average (algorithmic) LL turning speed for these solvers is on average 1 STPS faster than their (intuitive/semi-intuitive) F2L turning speed. For notable solvers like Tymon and Feliks, this difference is over 3 STPS.</p>
+            <p>Algorithmic methods are doing fairly well compared to block building methods, and for good reason. TPS on the new hardware has shot up and it makes sense to make best use of it. <a href="https://drive.google.com/file/d/1hfPgMPEbKRRm-YcehwaOXKG05hgEGouG/view?usp=sharing">Here</a> is a part of a spreadsheet by Brest analysing the World Championship 2019 3x3x3 Finals containing the average STPS of the 14 CFOP solvers during First 2 Layers (F2L) and Last Layer (LL). Despite there being OLL-recognition and PLL-recognition pauses, the average (algorithmic) LL turning speed for these solvers is on average 1 STPS faster than their (intuitive/semi-intuitive) F2L turning speed. For notable solvers like Tymon and Feliks, this difference is over 3 STPS.</p>
             <p>Motivated by this premise, a method with a bearable number of algorithms, yet highly algorithmically reliant and with good recognition and algorithms has the potential to beat a good deal of methods. A means to achieve that is to have 3 algorithmic steps (compared to 2 for CFOP for example); while ensuring that those algorithms do indeed tackle a large set of cases (2LLL CFOP handles ~62k cases, so the said algorithms should handle 62k^(3/2) ~ 15M cases). The <a href="about.html">about</a> page dives into the details of how such a method was derived.</p>
-            <p>While an algorithmic method promises high turning speed, it usually has the disadvantage of having a high movecount to go along. For example, order of the big-3 by fraction solved intuitively is Roux > ZZ > CFOP, while the order of these methods by movecount in STM is Roux < ZZ < CFOP. But, interestingly, the movecount of (human) Mehta is comparable to (human) Roux (stats and simulation results can be found in the variants' section). These are in a nutshell what make this method a compelling candidate to at least compete with the big-3</p>
+            <p>While an algorithmic method promises high turning speed, it usually has the disadvantage of having a high movecount to go along. For example, order of the big-3 by fraction solved intuitively is Roux > ZZ > CFOP, while the order of these methods by movecount in STM is Roux < ZZ < CFOP. But, interestingly, the movecount of (human) Mehta is comparable to (human) Roux (stats and simulation results can be found in the variants' sections). These are in a nutshell what make this method a compelling candidate to at least compete with the big-3</p>
         </div>
         <br>
     </section>
@@ -96,17 +96,7 @@
         <br>
 
         <div class="container">
-            <p>The above is a flowchart that depicts the entire Mehta family of methods. Note that this flowchart does not provide the AUFs needed to do between steps, thus simply adding average movecounts along each path will not give the correct movecount for that path.</p>
-
-            <p>The first step is to solve a psuedo-EO-Ledge (also called simply EO-ledge henceforth). An EO-ledge is when a 1x2x3 block is solved on DL (specifically the D centre, the DF, DL and DB edges, and the DFL and DBL corners), the E layer belt is solved (though not necessarily aligned with the 1x2x3 block, hence the prefix "psuedo"), and the remaining 5 edges (the 4 U layer edges and the DR edge) are oriented. Solved traditionally (First block + 3-quarters belt + EO-last-edge), it takes 18-21 moves during a colour-neutral speedsolve. A much more detailed explanation of this step is given in the EO-ledge section.</p>
-
-            <p>From this point, there are two variations of the method. 
-                <ul>
-                    <li>The first one (highlighted in the large blue box) is Mehta-Option-Select (Mehta-OS, or simply Mehta). This variation aims to solve the cube using one of 4 paths depending on the case obtained at each step. Such a structured option-select system allows for efficient solves; however it must be noted that knowing a single path (for example EO-Ledge -> DCAL -> CDRLL -> L5EP) is enough to get sub-50 movecount solves on average. A much more detailed analysis of this variation is given in the respective variant page.</li>
-                    <li>The second one (highlighted in the large red box) is Mehta-TDR (TDR stands for Trang's DR block) which simply solves the cube in two steps from this point. However, this requires over 800 algorithms and should be considered only by advanced solvers. It is possible to achieve a sub-45 movecount average in human speedsolves if combined with advanced EO-Ledge techniques. A much more detailed analysis of this variation is given in the respective variant page.</li>
-                </ul>
-            </p>
-
+            
 
         </div>
     </section>
@@ -140,16 +130,27 @@
     		</div>
     	</div>
     </section>
-
+    -->
 
 
     <section id="rest">
     	<div class="container">
-    		<p></p>
+            <p>The above is a flowchart that depicts the entire Mehta family of methods. [Note that this flowchart may not accurately incorporate the AUFs needed to do between steps, thus simply adding average movecounts along each path will not necessarily give the precise movecount for that path.]</p>
+
+            <p>The first step is to solve a psuedo-EO-Ledge (also called simply EO-ledge henceforth). An EO-ledge is when a 1x2x3 block is solved on DL (specifically the D centre, the DF, DL and DB edges, and the DFL and DBL corners), the E layer belt is solved (though not necessarily aligned with the 1x2x3 block, hence the prefix "psuedo"), and the remaining 5 edges (the 4 U layer edges and the DR edge) are oriented. Solved traditionally (First block + 3-quarters belt + EO-last-edge), it takes 18-21 moves during a colour-neutral speedsolve. A much more detailed explanation of this step is given in the EO-ledge section.</p>
+
+            <p>From this point, there are two variations of the method.
+            <ul>
+                <li>The first one (highlighted in the large blue box) is Mehta-Option-Select (Mehta-OS, or simply Mehta). This variation aims to solve the cube using one of 4 paths depending on the case obtained at each step. Such a structured option-select system allows for efficient solves; however it must be noted that knowing a single path (for example EO-Ledge -> DCAL -> CDRLL -> L5EP) is enough to get sub-50 movecount solves on average. A much more detailed analysis of this variation is given in the respective variant page.</li>
+                <li>The second one (highlighted in the large red box) is Mehta-TDR (TDR stands for Trang's DR block) which simply solves the cube in two steps from this point. However, this requires over 800 algorithms and should be considered only by advanced solvers. It is possible to achieve a sub-45 movecount average in human speedsolves if combined with advanced EO-Ledge techniques. A much more detailed analysis of this variation is given in the respective variant page.</li>
+            </ul></p>
+
+    		<p>Many other variants are possible for this method, and a great deal of them have been tested for recognition, algortihm-length and execution; of these, the OS system and the TDR variant are far superior compared to the rest.</p>
+            
+            <p>The method can be extended to big cubes as is done in <a href="">Mehta-MH</a>. It can also be applied to puzzles like Square-1, 2x2x2, etc. However the effectiveness compared to the currently popular methods is unknown.</p>
     	</div>
     </section>
-    -->
-
+    
 
 	<footer>
 		<div class="container">

@@ -144,7 +144,7 @@ header .dropdown:hover .primary{
   margin:15px;
 }
 
-#rest p{
+#rest p, #rest ul{
   word-spacing: 0.3em;
   text-align: justify;
 }
@@ -167,18 +167,19 @@ header .dropdown:hover .primary{
   border-right:2px solid black;
 }
 
-#rest th:nth-child(5){
-  width:50%;
-}
-
-#rest tr td:nth-child(1){
+#rest tr td:nth-child(1), #rest tr td:nth-child(10){
   font-weight: bold;
-  letter-spacing: 0.2em;
 }
 
 #rest tbody tr:nth-child(even){
   background: #cccccc;
 }
+
+#variant-exp p, #variant-exp ul{
+  word-spacing: 0.3em;
+  text-align: justify;
+}
+
 
 footer{
   padding:0px;
