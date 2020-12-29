@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="description" content="3x3x3 Speedsolving Method - Mehta">
+	<meta name="keywords" content="3x3, Rubik's cube, algorithm, method, Mehta">
+  	<meta name="author" content="Yash Mehta">
+	
+	<title>Mehta</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+      <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Mehta</span></h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="index.html">Home</a>
+                </div>
+            </li>
+           
+            <li class="current">
+                <div class="dropdown">
+                    <a class="primary" href="EOLedge.html">EO-Ledge</a>
+                </div>
+            </li>
+            
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="">Variants</a>
+                    <div class="dropdown-content">
+                        <a class="secondary" href="mehta_os.html">Mehta-OS</a>
+                        <a class="secondary" href="mehta_tdr.html">Mehta-TDR</a>
+                    </div>
+                </div>
+            </li>
+                        
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="examples.html">Examples</a>
+                </div>
+            </li>
+            
+            <li>
+                <div class="dropdown">
+                    <a class="primary" href="about.html">About</a>
+                </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <section id="variant-exp">
+        <div class="container">
+            <p>Mehta as a method was developed top-down; meaning the finish of the solve was invented first, and the rest of the method was build around this finish. It turned out that a structure called psuedo-EO-Ledge (or simply EO-Ledge henceforth) was to be built in order to execute the finish. This structure is similar to F2L-1 in CFOP, in the sense that it is a midway point in the solve and roughly signifies the transition from intuition-based solving to algorithmic solving.</p>
+
+            <p>Getting a few abbreviations and definitions out of the way:</p>
+            <ul>
+                <li><b>FB:</b> First Block; a 1x2x3 block of solved pieces, done intuitively and as the first step of the solve.</li>
+                <li><b>3QB/TQB:</b> 3-Quarters Belt; refers to solving 3 of the 4 belt edges (i.e. E slice edges) after FB, mainly using RUu-gen turning.</li>
+                <li><b>EOLE:</b> Edge Orientation + Last (belt) Edge; a ~6 STM intuitive algorithm, to insert the last belt edge and orient the remaining 5 edges on the 3x3x3 after 3QB. All recommended EOLE algorithms can be found <a href="https://docs.google.com/spreadsheets/d/1qY8c-ypPAn-51pDQOYI-DzpyMPnPAri2qOTh3ZG1fjw/edit#gid=2087327765">here</a>.</li>
+                <li><b>EO-Ledge:</b> Technically psuedo-EO-Ledge, is the state achieved after FB + 3QB + EOLE. Check out the example solves to understand this state better.
+            </ul>
+            
+        </div>
+    </section>
+
+
+    <section id="rest">
+    	<div class="container">
+            <p>EO-Ledge is traditionally solved as FB -> 3QB -> EOLE. The movecount statistics for these steps (generated over 16000 solves) are mentioned below. The FB and 3QB statistics are step-wise move-optimal, and for EOLE the recommended speed-optimal algorithms were used.</p>
+
+            <table>
+                <thead>
+                    <th>EO-Ledge</th>
+                    <th>FB (CN)</th>
+                    <th>3QB</th>
+                    <th>preAUF (EOLE)</th>
+                    <th>EOLE</th>
+                    <th>Total</th>
+                </thead>
+                <tr>
+                    <td>Average</td>
+                    <td>5.15</td>
+                    <td>5.03</td>
+                    <td>1.37</td>
+                    <td>5.86</td>
+                    <td>17.40</td>
+                </tr>
+                <tr>
+                    <td>Std. Dev.</td>
+                    <td>0.72</td>
+                    <td>0.96</td>
+                    <td>0.56</td>
+                    <td>1.44</td>
+                    <td>1.96</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>Minimum</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>24</td>
+                </tr>
+            </table>
+
+            <p>The first step is the First Block, which is a 1x2x3 block solved on DL (specifically the D centre, the DF, DL and DB edges, and the DFL and DBL corners). This is slightly different from a Roux first block in terms of its location, but otherwise is identical. This new location potentially makes doing the first-block slightly more ergonomic - in Roux since one of the edges in the FB is the BL edge, it usually makes it necessary for the solver to do a B or an L move; in Mehta the First block is mostly solved using RUDF. After FB, the Roux blindspots of DB and DF are traded for BL and FL in Mehta.</p>
+
+            <p>There is no Block-building (or even intuitive 2-pairing) in Mehta after FB, and only elementary CFOP-style EO-recognition is used, which makes being fully Colour Neutral (CN) a great asset. This gives a total of 24 possible FB to choose from during inspection, and any pre-made 1x1x2 pair can be utilised in 4 different ways (compared to 8 possible FB and 1-2 different ways to utilise each pre-made pair for x2y-neutral solvers). Most top Roux solvers are x2y-neutral, and average less than 7 moves for their first block; so a plausible average movecount ball-park for a completely CN Mehta solver to solve FB is 6-7 (CN Optimal for about 70% scrambles is 5 moves or less; compared to under 40% scrambles with 5-move or better x2y-neutral optimals; these stats are from <a href="https://docs.google.com/spreadsheets/d/1EectP3O_qwQp_2WohbDrlohxhs2ee17sjFfxZr_-D1g/edit#gid=0">here</a>).</p>
+
+            <p>One of reasons CFOP is successful is the choice the solver has during F2L; after cross, any of the 4 F2L pairs spotted can be solved. This freedom in order of solving different parts of the cube allows the solver to take advantage of lucky cases and more importantly not have to search as much for pieces to solve. The 3QB step tries to emulate the same, though in a much more humble capacity. After solving FB, with only 9 edge-locations remaining for the 4 useful edges in the step, it is easy to find 3QB edges and solve the luckier cases first.</p>
+
+            <p>This step is primarily RUu-gen, which after the advent of magnetic cubes is a fairly desirable moveset, especially for short steps such as 3QB. Using only RUu-gen turning and the occasional tricks like S R S', F and f move inserts, etc. it is easy to average ~6 moves for this step. This number gets much smaller with the slightest of influencing during FB, which is evident by the fact that even with no influencing during FB there is over 20% chance that one of the belt edges would be solved.</p>
+
+            <p>It should be noted that planning FB + 1 edge in Mehta is far easier than planning FB + DR edge in Roux because of the 4 possible first edge options; so it is recommended that this be done to eliminate any FB-to-3QB transition pauses. After FB+1, assuming the solved belt edge is in BL, here are some thumb-rules to follow for the next two edges if no lucky solutions pop out:
+            <ol>
+                <li>If the BR+FR edges are both oriented (same side colour) and not stuck in FL, solve with RU-gen.</li>
+                <li>If the FL+FR edges would both be oriented and not be stuck in BL after doing a u’ move, solve with u’ followed by RU-gen.</li>
+                <li>If the BR+FR edges are both misoriented (same top colour) and not stuck in FL, set up to S R* S’.</li>
+                <li>If the FL+FR edges would both be misoriented and not be stuck in BL after doing a u’ move, solve with u' followed by set up to S R* S’</li>
+            </ol></p>
+
+            <p>EOLE is a step that can be done algorithmically; however most cases have short intuitive algorithms (quite like individual F2L pairs). Keeping this step intuitive allows the solver to modify the algorithms to influence the following step, usually by orienting some corners or setting up easy DCAL cases for example. Of course, over time it is recommended to algorithmise this step with multiple algorithm for each case. Note that EOLE algorithms are substantially faster when some of the remaining edges are already oriented, so partial EO duing 3QB could be an idea for some solves. EOLE is recognised using the EO-pattern on U layer and the orientation of the edge in the final belt slot; which can be done during the u and U moves done after 3QB to set up for the algorithm.</p>
+
+            <p>FB -> 3QB -> EOLE is not the only way to achieve psuedo-EO-Ledge, and advanced solvers could plan out a psuedo-2x2x3 or some variation they see fit depending on the scramble. Top Roux solvers can often plan FB + DR edge and track a pair; top CFOP solvers can often plan Cross + 2 pairs; so it is not far-fetched to expect top Mehta solvers to plan FB + 3QB in the 15-second inspection, and be remaining with only 3-4 algorithms to finish the solve.</p>
+    	</div>
+    </section>
+    
+
+	<footer>
+		<div class="container">
+    		<p>For improvements or corrections, contact: yashovardhanmehta@gmail.com</p>
+    	</div>
+    </footer>
+</body>
+</html>
