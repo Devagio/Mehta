@@ -62,10 +62,79 @@
 
     <section>
         <div class="container">
-            
+            <p>Here are a few example solves to give a sense of how a speed-solve using Mehta would look like. Many more example solves can be found <a href="https://www.speedsolving.com/threads/the-3x3x3-example-solve-thread.14345/page-386">here</a> from pages 386 to 400; with the latter pages having more relevant examples.</p>
         </div>
     </section>
     
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h3>F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2 (OS)</h3>
+                <p>z2 // Inspection</p>
+                <p>R // Square</p>
+                <p>U2 // Pair</p>
+                <p>D2 B // FB</p>
+                <p>Here we see two belt edges in UF and UR with the same side colour, so we know we can solve them together.</p>
+                <p>E' R2 U' R' // 3QB</p>
+                <p>u' F' U' F R U' R' // Intuitive EOLE</p>
+                <p>There seem to be many unoriented corners, so it would likely be a difficult 6CO case to recognise and execute. So we go ahead with DCAL.</p>
+                <p>U' R U2 R' U R2 U' R' U2 R' // DCAL</p>
+                <p>Since we have CP solved, we can go ahead with CDRLL and get a quick case. Also since the DR edge got solved, we could also go for JTLE which would just be a simple OCLL. In this case, both CDRLL and JTLE have the same algorithm, so it doesn't matter much which reasoning was used.</p>
+                <p>U R U2 R2 U' R2 U' R2 U2 R // CDRLL / JTLE</p>
+                <p>M2 U' M' U2 M U' M2 U // Finish</p>
+            </div>
+
+            <div class="box">
+                <h3>F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2 (TDR)</h3>
+                <p>z2 // Inspection</p>
+                <p>R // Square</p>
+                <p>U2 // Pair</p>
+                <p>D2 B // FB</p>
+                <p>Here we see two belt edges in UF and UR with the same side colour, so we know we can solve them together.</p>
+                <p>E' R2 U' R' // 3QB</p>
+                <p>u' F' U' F R U' R' // Intuitive EOLE</p>
+                <p>U' R U2 R' U R2 U' R' U2 R' // TDR</p>
+                <p>U' R' U R U' R2 U2 R U R' U R2 U' R' U R U' // ZBLL</p>
+            </div>
+
+            <div class="box">
+                <h3>B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D' (OS)</h3>
+                <p>z' // Inspection</p>
+                <p>F' L // Square </p>
+                <p>R' F2 R' U2 F' // FB </p>
+                <p>We do not see any obvious ways to solve 2 edges at once, so we proceed to solve the edge that showed up in UF.</p>
+                <p>U u2 R // 1 edge</p>
+                <p>This sets up the UR and DR edges to be belt edges with the same side colour.</p>
+                <p>E R // 3QB</p>
+                <p>u' F' U F2 R F' R' // EOLE </p>
+                <p>Here, we see a good amount of corners are oriented, so the 6CO case would be easy to recognise and execute. </p>
+                <p>U2 D R' U R U R' U2 R D' // 6CO </p>
+                <p>The DR pieces are all in the U layer, but they're all un-connected, which likely means a bad APDR case. So we simply move forward with 6CP.</p>
+                <p>U' R2 U R2 U' D R2 U' R2 U R2 D' R2 // 6CP </p>
+                <p>Now, we can do the ADF immediately to force an MU-gen L5EP.</p>
+                <p>D' // ADF</p>
+                <p>U2 M U2 M' U M' U2 M' U' M2 U2 // L5EP </p>
+            </div>
+
+            <div class="box">
+                <h3>B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D' (TDR)</h3>
+                <p>z' // Inspection</p>
+                <p>F' L // Square </p>
+                <p>R' F2 R' U2 F' // FB </p>
+                <p>We do not see any obvious ways to solve 2 edges at once, so we proceed to solve the edge that showed up in UF.</p>
+                <p>U u2 R // 1 edge</p>
+                <p>This sets up the UR and DR edges to be belt edges with the same side colour.</p>
+                <p>E R // 3QB</p>
+                <p>u' F' U F2 R F' R' // EOLE </p>
+                <p>U R2 U R2 F U' R2 U R2 U F' // TDR </p>
+                <p>u' R U2 R' U' R U' R' U2 R U R' U R U2 R' U2 // ZBLL</p>
+                <p>Notice the u' instead of U' for the pre-AUF of ZBLL, to solve the D-offset.</p>
+            </div>
+        </div>
+    </section>
+
+
 
 	<footer>
 		<div class="container">
