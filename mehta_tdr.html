@@ -82,7 +82,7 @@
                 <thead>
                     <th>TDR variation</th>
                     <th>TDR (with pre-AUF)</th>
-                    <th>ZBLL(with pre-AUF)</th>
+                    <th>ZBLL (with pre-AUF)</th>
                     <th>ABF</th>
                     <th>Total</th>
                 </thead>
@@ -125,9 +125,9 @@
 
             <p>Note that these are algorithmic steps, so the efficiency of the simulation is identical to the efficiency of any solver for each simulation. The average is under 27 moves for the finish, which is roughly equal to full Mehta-OS in theory, but there are many differences between the two approaches.</p>
 
-            <p>First, being a 2-step finish instead of a 3-step finish allows for lesser points in the solve to pause for recognition. This is somewhat balanced out by the fact that the individual recognitions for Mehta-TDR are harder than the recognitions for Mehta-OS, and it is significantly harder to predict the case of the next step while doing an algorithm. Though, the recognition for the TDR step is easy enough to be predicted and even influenced during EOLE.</p>
+            <p>First, being a 2-step finish instead of a 3-step finish allows for lesser points in the solve to pause for recognition. This is somewhat balanced out by the fact that the individual recognitions for Mehta-TDR are harder than the recognitions for Mehta-OS, and it is significantly harder to predict the case of the next step while doing an algorithm, and of course there is the lag in recall that might come at first with big algsets like ZBLL. Though, the recognition for the TDR step is easy enough to be predicted and even influenced during EOLE.</p>
 
-            <p>Second, the sub-27 movecount for the Mehta-OS finish is done assuming a solver that always knows the best path, which may not always be the case. Thus, in practical solve situations, this movecount is bound to rise slighlty for Mehta-OS, but not for Mehta-TDR. Also, the average TPS for Mehta-TDR is likely to be faster than that for Mehta-OS after enough practice simply because the speed-optimal TDR and ZBLL algorithms are extremely finger-friendly.</p>
+            <p>Second, the sub-27 movecount for the Mehta-OS finish is done assuming a solver that always knows the best path, which may not always be the case. Thus, in practical solve situations, this movecount is bound to rise slighlty for Mehta-OS, but not for Mehta-TDR. Also, the average TPS for Mehta-TDR is likely to be faster than that for Mehta-OS after enough practice simply because the speed-optimal TDR and ZBLL algorithms are extremely finger-friendly. To quote myself, "TDR is by far the best algset I have ever come across."</p>
 
             <p>Finally, Mehta-TDR has very low likelihood of skips when no influencing is done (~0.1% chance to skip any step during a solve), while Mehta-OS has ~3.5% chance to skip one of the three steps, and ~0.1% chance to skip two of the three steps assuming no influencing. Also because it is relatively easier to influence Mehta-OS steps, it would be a better candidate for frequent fast singles.</p>
 
