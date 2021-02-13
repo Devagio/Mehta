@@ -76,9 +76,62 @@
 
     <section id="rest">
     	<div class="container">
-            <p>As of late December 2020, the TDR algorithms are in the process of undergoing a final screening to ensure they are speed-optimal. The expected average movecount of these algorithms is 9-10 STM, with most algorithms being RU and RUD. Preliminary simulations using the older algorithms gives a rough estimate of 26 moves for the finish, which is slightly better than the individual OS paths, but more importantly this saves a recognition pause which is a major time saver.</p>
+            <p>As of February 2021, the TDR algorithms have undergone a final screening to ensure they are speed-optimal, with most algorithms being RU and RUD. The movecount statistics (generated over 250,000 solves using the algorithm for each case as mentioned in the spreadsheet; hence note these are speed-optimal stats, not move-optimal) are given below:</p>
 
-            <p>The solves using the TDR variation are fairly straight-forward, allowing the user to focus on few specific things like recognition, TPS, and EO-Ledge efficiency. The TDR algorithms are almost all sub-1-able, some being even quicker; and it is possible to look-ahead to the TDR case during EO-Ledge, minimising the pause before TDR. With sufficient advanced EO-ledge techniques, it is easily possible to achieve sub-45 average movecounts for this algorithm-based method, which in itself is a testament to the potential of this variant.</p>
+            <table>
+                <thead>
+                    <th>TDR variation</th>
+                    <th>TDR (with pre-AUF)</th>
+                    <th>ZBLL(with pre-AUF)</th>
+                    <th>ABF</th>
+                    <th>Total</th>
+                </thead>
+                <tr>
+                    <td>Average</td>
+                    <td>10.51</td>
+                    <td>15.10</td>
+                    <td>1.10</td>
+                    <td>26.71</td>
+                </tr>
+                <tr>
+                    <td>Std. Dev.</td>
+                    <td>2.00</td>
+                    <td>2.68</td>
+                    <td>0.60</td>
+                    <td>3.39</td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>Minimum</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Maximum</td>
+                    <td>16</td>
+                    <td>22</td>
+                    <td>2</td>
+                    <td>38</td>
+                </tr>
+            </table>
+
+            <p>Note that these are algorithmic steps, so the efficiency of the simulation is identical to the efficiency of any solver for each simulation. The average is under 27 moves for the finish, which is roughly equal to full Mehta-OS in theory, but there are many differences between the two approaches.</p>
+
+            <p>First, being a 2-step finish instead of a 3-step finish allows for lesser points in the solve to pause for recognition. This is somewhat balanced out by the fact that the individual recognitions for Mehta-TDR are harder than the recognitions for Mehta-OS, and it is significantly harder to predict the case of the next step while doing an algorithm. Though, the recognition for the TDR step is easy enough to be predicted and even influenced during EOLE.</p>
+
+            <p>Second, the sub-27 movecount for the Mehta-OS finish is done assuming a solver that always knows the best path, which may not always be the case. Thus, in practical solve situations, this movecount is bound to rise slighlty for Mehta-OS, but not for Mehta-TDR. Also, the average TPS for Mehta-TDR is likely to be faster than that for Mehta-OS after enough practice simply because the speed-optimal TDR and ZBLL algorithms are extremely finger-friendly.</p>
+
+            <p>Finally, Mehta-TDR has very low likelihood of skips when no influencing is done (~0.1% chance to skip any step during a solve), while Mehta-OS has ~3.5% chance to skip one of the three steps, and ~0.1% chance to skip two of the three steps assuming no influencing. Also because it is relatively easier to influence Mehta-OS steps, it would be a better candidate for frequent fast singles.</p>
+
+            <p>In all, the solves using the TDR variation are fairly straight-forward, allowing the user to focus on few specific things like recognition, TPS, and EO-Ledge efficiency. The TDR algorithms are almost all sub-1-able, some being even quicker; and it is possible to look-ahead to and influence the TDR case during EO-Ledge, minimising the pause before TDR. With sufficient advanced EO-ledge techniques, it is possible to achieve sub-45 average movecounts for this algorithm-based method, which in itself is a testament to the potential of this variant.</p>
     	</div>
     </section>
     
