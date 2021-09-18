@@ -76,20 +76,16 @@
             <div class="box">
                 <h3>F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2 (OS)</h3>
 
-                <twisty-player id="main" experimental-setup-alg="F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2" alg="
+                <twisty-player id="eg1" experimental-setup-alg="F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2" alg="
                 
                 z2 // Inspection
-                
                 R // Square
-                
                 U2 // Pair
-                
                 D2 B // FB
                 
                 // Here we see two belt edges in UF and UR with the same side colour, so we know we can solve them together.
                 
                 E' R2 U' R' // 3QB
-                
                 u' F' U' F R U' R' // Intuitive EOLE
                 
                 //There seem to be many unoriented corners, so it would likely be a difficult 6CO case to recognise and execute. So we go ahead with DCAL.
@@ -99,53 +95,44 @@
                 // Since we have CP solved, we can go ahead with CDRLL and get a quick case. Also since the DR edge got solved, we could also go for JTLE which would just be a simple OCLL. In this case, both CDRLL and JTLE have the same algorithm, so it doesn't matter much which reasoning was used.
                 
                 U R U2 R2 U' R2 U' R2 U2 R // CDRLL / JTLE
-                
                 M2 U' M' U2 M U' M2 U // Finish">
                       
                 </twisty-player>
 
-                <twisty-alg-viewer for="main"></twisty-alg-viewer>
+                <twisty-alg-viewer for="eg1"></twisty-alg-viewer>
 
             </div>
 
             <div class="box">
                 <h3>F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2 (TDR)</h3>
 
-                <twisty-player id="main" experimental-setup-alg="F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2" alg="
+                <twisty-player id="eg2" experimental-setup-alg="F' D B' U2 F' B2 L2 U B R U2 R' D2 F2 R' B2 R' B2 U2 B2" alg="
 
                 z2 // Inspection
-                
                 R // Square
-                
                 U2 // Pair
-                
                 D2 B // FB
                 
                 // Here we see two belt edges in UF and UR with the same side colour, so we know we can solve them together.
                 
                 E' R2 U' R' // 3QB
-                
                 u' F' U' F R U' R' // Intuitive EOLE
-                
-                U' R U2 R' U R2 U' R' U2 R' // TDR
-                
+                U' R U2 R' U R2 U' R' U2 R' // TDR              
                 U' R' U R U' R2 U2 R U R' U R2 U' R' U R U' // ZBLL">
                       
                 </twisty-player>
 
-                <twisty-alg-viewer for="main"></twisty-alg-viewer>
+                <twisty-alg-viewer for="eg2"></twisty-alg-viewer>
 
             </div>
 
             <div class="box">
                 <h3>B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D' (OS)</h3>
 
-                <twisty-player id="main" experimental-setup-alg="B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D'" alg="
+                <twisty-player id="eg3" experimental-setup-alg="B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D'" alg="
                   
                 z' // Inspection
-
                 F' L // Square
-
                 R' F2 R' U2 F' // FB
 
                 // We do not see any obvious ways to solve 2 edges at once, so we proceed to solve the edge that showed up in UF.
@@ -155,7 +142,6 @@
                 // This sets up the UR and DR edges to be belt edges with the same side colour.
 
                 E R // 3QB
-
                 u' F' U F2 R F' R' // EOLE
 
                 // Here, we see a good amount of corners are oriented, so the 6CO case would be easy to recognise and execute.
@@ -169,45 +155,39 @@
                 // Now, we can do the ADF immediately to force an MU-gen L5EP.
 
                 D' // ADF
-
                 U2 M U2 M' U M' U2 M' U' M2 U2 // L5EP">
                       
                 </twisty-player>
 
-                <twisty-alg-viewer for="main"></twisty-alg-viewer>
+                <twisty-alg-viewer for="eg3"></twisty-alg-viewer>
 
             </div>
 
             <div class="box">
                 <h3>B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D' (TDR)</h3>
 
-                <twisty-player id="main" experimental-setup-alg="B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D'" alg="
+                <twisty-player id="eg4" experimental-setup-alg="B2 U2 B D2 B' R2 B' F2 D2 R2 U2 L R D' B R' B2 R' D2 B2 D'" alg="
                   
                   z' // Inspection
-
                   F' L // Square
-
                   R' F2 R' U2 F' // FB
                   
                   // We do not see any obvious ways to solve 2 edges at once, so we proceed to solve the edge that showed up in UF.
-
+                  
                   U u2 R // 1 edge
 
                   // This sets up the UR and DR edges to be belt edges with the same side colour.
 
                   E R // 3QB
-
                   u' F' U F2 R F' R' // EOLE
-
                   U R2 U R2 F U' R2 U R2 U F' // TDR
-
                   u' R U2 R' U' R U' R' U2 R U R' U R U2 R' U2 // ZBLL
 
                   // Notice the u' instead of U' for the pre-AUF of ZBLL, to solve the D-offset.">
                       
                 </twisty-player>
 
-                <twisty-alg-viewer for="main"></twisty-alg-viewer>
+                <twisty-alg-viewer for="eg4"></twisty-alg-viewer>
 
             </div>
         </div>
