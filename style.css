@@ -119,6 +119,13 @@ header .dropdown:hover .primary{
   text-align: center;
 }
 
+twisty-player{
+  width:100%;
+  border: 4px double #cccccc;
+  background: #f4f4f4;
+  margin:auto;
+}
+
 /* Bar */
 #bar{
   background-color:#47535d;
